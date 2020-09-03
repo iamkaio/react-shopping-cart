@@ -7,18 +7,26 @@ export const Container = styled.div`
    display: flex;
    flex-wrap: wrap;
    
-   li {
-   
-   max-width: 345px;
+   li {   
+   max-width: 370px;
    width: 100%;
    flex: 1 0 25%;
    margin: 5px;
    list-style: none;
    transition: ease-in-out 180ms;
    transform-origin: center center;
-   &:hover {
-    transform: translateY(-10px);
+   animation: showProducts ease-in-out 580ms forwards;
+   @keyframes showProducts {
+    0% {
+    opacity: 0;
+    transform: translateY(15px);
+    }
+    100% {
+    opacity: 1;
+    transform: translateY(0px);
+    }
    }
+   
    .product {
    width: 100%;
    display: flex;

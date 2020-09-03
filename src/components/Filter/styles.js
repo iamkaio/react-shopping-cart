@@ -5,7 +5,7 @@ export const FilterWrapper = styled.div`
    display: flex;
    justify-content: space-between;
    align-items: center;
-   height: 60px;
+   height: 80px;
    padding: 0px 5px;
 `;
 export const Orders = styled.div`
