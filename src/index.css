@@ -5,6 +5,7 @@
     text-decoration: none;
     font-family: 'Poppins';
     transition: ease-in-out 180ms;
+    outline: none!important;
 }
 
 #root {
@@ -19,6 +20,7 @@
     max-width: 60%;
     background: #fff;
 }
+
 
 .cart-preview {
     position: fixed;

@@ -1,0 +1,26 @@
+.ReactModal__Overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.8) !important;
+    border: none;
+}
+
+.modal {
+    max-width: 1000px;
+    width: 100%;
+    background: #FFF;
+    border: none;
+    animation: fadeInModal ease-in-out 520ms forwards;
+}
+
+@keyframes fadeInModal {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
