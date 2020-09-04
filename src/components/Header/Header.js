@@ -9,8 +9,7 @@ class Header extends Component {
         return (
             <div>
                 <HeaderWrapper>
-                    <a href="/">clothes.co</a>
-                    <div className="cart" >cart</div>
+                    <a href="/">Case Conquer</a>
                 </HeaderWrapper>
             </div>
         );

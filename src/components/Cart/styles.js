@@ -120,4 +120,5 @@ export const TotalCart = styled.div`
 
 export const ModalCheckout = styled.div`
 width: 100%;   
+display: none;
 `;
