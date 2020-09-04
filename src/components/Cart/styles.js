@@ -8,6 +8,7 @@ export const HeaderCart = styled.div`
    width: 100%;
    margin-bottom: 20px;
 `;
+
 export const PreviewCart = styled.div`
    width: 100%;
    
@@ -115,4 +116,9 @@ export const TotalCart = styled.div`
   }
   
 
+`;
+
+export const ModalCheckout = styled.div`
+width: 100%;
+   
 `;
