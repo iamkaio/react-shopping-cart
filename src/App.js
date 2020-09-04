@@ -63,7 +63,7 @@ class App extends React.Component {
                             : -1
                         : a._id > b._id
                             ? 1
-                            : 1
+                            : -1
                 )
         }))
     }
@@ -84,32 +84,32 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                <Header/>
+                <div className="container">
+                    <Header/>
 
-                <main>
-                    <div className="content">
-                        <div className="product_content">
-                            <Filter
-                                count={this.state.products.length}
-                                size={this.state.size}
-                                sort={this.state.sort}
-                                filterProducts={this.filterProducts}
-                                sortProducts={this.sortProducts}
-                            />
-                            <Products products={this.state.products} addToCart={this.addToCart}/>
+                    <main>
+                        <div className="content">
+                            <div className="product_content">
+                                <Filter
+                                    count={this.state.products.length}
+                                    size={this.state.size}
+                                    sort={this.state.sort}
+                                    filterProducts={this.filterProducts}
+                                    sortProducts={this.sortProducts}
+                                />
+                                <Products products={this.state.products} addToCart={this.addToCart}/>
+                            </div>
+
+                            <div className="cart-preview">
+                                <Cart
+                                    cartItems={this.state.cartItems}
+                                    removeFromCart={this.removeFromCart}
+                                    createOrder={this.createOrder}/>
+                            </div>
                         </div>
+                    </main>
 
-                        <div className="cart-preview">
-                            <Cart
-                                cartItems={this.state.cartItems}
-                                removeFromCart={this.removeFromCart}
-                                createOrder={this.createOrder}/>
-                        </div>
-                    </div>
-                </main>
-
-            </div>
+                </div>
         );
     }
 }

@@ -15,6 +15,7 @@ class Products extends Component {
         }
     }
 
+
     openModal = (product) => {
         this.setState({product})
     }
@@ -26,27 +27,30 @@ class Products extends Component {
         const {product} = this.state
         return (
             <div>
-                <Container>
-                    <ul className="products">
-                        {this.props.products.map((product) => (
-                            <li key={product._id}>
-                                <div className="product">
-                                    <a href={"#" + product._id} onClick={() => this.openModal(product)}>
-                                        <img src={product.image} alt={product.title}/>
-                                        <p>{product.title}</p>
-                                    </a>
 
-                                    <div className="product-price">
-                                        <p>{formatCurrency(product.price)}</p>
-                                        <button onClick={() => this.props.addToCart(product)} className="btnBuy">
-                                            adicionar ao carrinho
-                                        </button>
-                                    </div>
+                    <Container>
+                    <ul className="products">
+                    {this.props.products.map((product) => (
+                        <li key={product._id}>
+                            <div className="product">
+                                <a href={"#" + product._id} onClick={() => this.openModal(product)}>
+                                    <img src={product.image} alt={product.title}/>
+                                    <p>{product.title}</p>
+                                </a>
+
+                                <div className="product-price">
+                                    <p>{formatCurrency(product.price)}</p>
+                                    <button onClick={() => this.props.addToCart(product)} className="btnBuy">
+                                        adicionar ao carrinho
+                                    </button>
                                 </div>
-                            </li>
-                        ))}
+                            </div>
+                        </li>
+                    ))}
                     </ul>
-                </Container>
+                    </Container>
+
+
 
                 {
                     product && (
@@ -98,4 +102,4 @@ class Products extends Component {
     }
 }
 
-export default Products;
+export default Products
