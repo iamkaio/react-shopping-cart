@@ -5,7 +5,6 @@ import {
     PreviewCart,
     TotalCart,
     ModalCheckout
-
 } from './styles';
 import formatCurrency from "../../util";
 
